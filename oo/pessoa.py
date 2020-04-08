@@ -11,6 +11,15 @@ class Pessoa:
         return 'Criando Classe Objetos e Atributos'
 
 
+    @staticmethod
+    def metodo_estatico():
+        return 42 + 3
+
+    @classmethod
+    def nome_e_atributo_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
+
+
 if __name__ == "__main__":
     
     wesley = Pessoa(nome='Wesley')
@@ -28,3 +37,5 @@ if __name__ == "__main__":
     print(Pessoa.olhos)
     print(wesley.olhos)
     print(pires.olhos)
+    print(Pessoa.metodo_estatico(), wesley.metodo_estatico())
+    print(Pessoa.nome_e_atributo_de_classe(), wesley.nome_e_atributo_de_classe())
